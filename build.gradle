@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+apply from: "${rootDir}/build-config/gradle/java-code-quality.gradle"
+apply from: "${rootDir}/build-config/gradle/jsonschema2pojo.gradle"
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:$springBootVersion")
+        classpath "org.jsonschema2pojo:jsonschema2pojo-gradle-plugin:$jsonschema2pojoVersion"
+    }
+}
+
+
+jar {
+    baseName = 'portfoliovisualizer'
+    version =  '0.1.0'
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile ("org.springframework.boot:spring-boot-starter:$springBootVersion")
+    compile ("org.springframework:spring-web:$springVersion")
+    compile ("com.fasterxml.jackson.core:jackson-databind:$jacksonVersion")
+    compile ("org.apache.commons:commons-lang3:$commonsLangVersion")
+    compile ("org.apache.commons:commons-collections4:$commonsCollections4Version")
+    compile ("commons-io:commons-io:$commonsIOVersion")
+    compile ("com.google.guava:guava:$guavaVersion")
+
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+}

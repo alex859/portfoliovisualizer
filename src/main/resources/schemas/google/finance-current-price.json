@@ -1,0 +1,54 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "t": {
+      "type": "string"
+    },
+    "e": {
+      "type": "string"
+    },
+    "l": {
+      "type": "string"
+    },
+    "l_fix": {
+      "type": "string"
+    },
+    "l_cur": {
+      "type": "string"
+    },
+    "s": {
+      "type": "string"
+    },
+    "ltt": {
+      "type": "string"
+    },
+    "lt": {
+      "type": "string"
+    },
+    "lt_dts": {
+      "type": "string"
+    },
+    "c": {
+      "type": "string"
+    },
+    "c_fix": {
+      "type": "string"
+    },
+    "cp": {
+      "type": "string"
+    },
+    "cp_fix": {
+      "type": "string"
+    },
+    "ccol": {
+      "type": "string"
+    },
+    "pcls_fix": {
+      "type": "string"
+    }
+  }
+}

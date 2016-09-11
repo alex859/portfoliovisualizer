@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "object",
+  "properties": {
+    "errors": {
+      "type": "object",
+      "properties": {}
+    },
+    "id": {
+      "type": "integer"
+    },
+    "source_name": {
+      "type": "string"
+    },
+    "source_code": {
+      "type": "string"
+    },
+    "code": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "urlize_name": {
+      "type": "string"
+    },
+    "display_url": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "updated_at": {
+      "type": "string"
+    },
+    "frequency": {
+      "type": "string"
+    },
+    "from_date": {
+      "type": "string"
+    },
+    "to_date": {
+      "type": "string"
+    },
+    "column_names": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "private": {
+      "type": "boolean"
+    },
+    "type": {
+      "type": "null"
+    },
+    "premium": {
+      "type": "boolean"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "array",
+        "items": {}
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+apply plugin: 'pmd'
+apply plugin: 'findbugs'
+
+pmd {
+	ignoreFailures = true
+	sourceSets = [sourceSets.main]
+	reportsDir = file("$project.buildDir/reports/pmd")
+	ruleSetFiles = files(new File(project.rootDir, 'build-config/pmd-ruleset.xml'))
+}
+
+tasks.withType(FindBugs) {
+	ignoreFailures = true
+	effort = "max"
+	reportLevel = "high"
+	excludeFilter = file(new File(project.rootDir, 'build-config/findbugs-exclude-filter.xml'))
+	reports {
+		xml.enabled = false
+		html.enabled = true
+	}
+}
+
+findbugs {
+	sourceSets = [sourceSets.main]
+}
